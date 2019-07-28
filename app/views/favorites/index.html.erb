@@ -9,7 +9,7 @@
             </h2>
             <%= image_tag topic.image.url %>
           
- 　          <%= link_to("/favorites/#{topic.id}/destroy_favorite_topics", {method: "post"}) do %>
+ 　          <%= link_to("/favorites/#{topic.id}/destroy", {method: "post"}) do %>
               <span class="fa fa-heart unlike fa-2x"></span>
             <% end %>  
            

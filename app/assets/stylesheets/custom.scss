@@ -104,7 +104,7 @@ h1 , h2 {
 }
 
 
-.topic-new-wrapper {
+.topic-new-wrapper , .comments-new-wrapper {
   padding-top: 120px;
 }
 
@@ -151,6 +151,14 @@ h1 , h2 {
   color: #8899a6;
   margin-left: 18px;
 }
+
+.comment-title {
+  padding-left: 17px;
+  padding-top: 10px;
+}
+
+
+
 
 
 

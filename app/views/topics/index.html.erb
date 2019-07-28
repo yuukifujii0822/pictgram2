@@ -18,10 +18,24 @@
                 <span class="fa fa-heart unlike fa-2x"></span>
               <% end %>  
             <% end %>
+            <!--いいねの数  -->
             <%= topic.favorite_users.count %>
-            <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <!--　コメント作成ページへのリンク -->
+            <%= link_to new_comment_path(topic_id: topic.id) do %>
+              <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            <% end %>
+            <!-- 投稿の説明  -->
             <p class="topic-text">
               <%= topic.description %>
+            </p>
+            <!--　コメント表示  -->
+            <h4 class="comment-title">コメント</h4>
+            <p class="topic-text">
+              <% topic.comments.each do |comment| %>
+          　　  　<p class="topic-text">
+                  <%= comment.content %>
+                </p>
+              <% end %>
             </p>
           </div>
         </div>
