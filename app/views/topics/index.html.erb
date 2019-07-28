@@ -10,12 +10,12 @@
             <%= image_tag topic.image.url %>
             
             <% if !topic.favorite_users.include?(current_user) %>
-              <%= link_to("/favorites/#{topic.id}/destroy", {method: "post"}) do %>
-                <span class="fa fa-heart like-btn-unlike fa-2x"></span>
+              <%= link_to("/favorites/#{topic.id}/create", {method: "post"}) do %>
+                <span class="fa fa-heart like-btn fa-2x"></span>
               <% end %>
             <% else %>
- 　            <%= link_to("/favorites/#{topic.id}/create", {method: "post"}) do %>
-                <span class="fa fa-heart like-btn fa-2x"></span>
+ 　            <%= link_to("/favorites/#{topic.id}/destroy", {method: "post"}) do %>
+                <span class="fa fa-heart like-btn-unlike fa-2x"></span>
               <% end %>  
             <% end %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
