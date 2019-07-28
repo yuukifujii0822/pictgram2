@@ -18,6 +18,7 @@
                 <span class="fa fa-heart unlike fa-2x"></span>
               <% end %>  
             <% end %>
+            <%= topic.favorite_users.count %>
             <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
             <p class="topic-text">
               <%= topic.description %>
