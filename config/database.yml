@@ -49,8 +49,8 @@ test:
 #
 production:
   <<: *default
- adapter: postgresql
- encoding: unicode
- pool: 5
+  database: pictgram2_production
+  username: pictgram2
+  password: <%= ENV['PICTGRAM2_DATABASE_PASSWORD'] %>
 
 
